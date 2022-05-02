@@ -16,11 +16,11 @@ void measuring(int *coordinates){
         switch(decide[0]){
             case 'y':
             case 'Y':
-                if (coordinates[5] > 1) {
+                if (coordinates[4] > 1) {
                     printf("Drehe 90 Grad nach rechts!\n");
                     wall=1;
                 } else {
-                    if (counter < coordinates[0] || counter < coordinates[1]) {
+                    if ((coordinates[4] == 2 && counter < coordinates[0]) || (coordinates[4] == 3 && counter < coordinates[1])) {
                         printf("Du befindest dich nicht in einem rechteckigen Raum!\n");
                         exit(0);
                     } else {
